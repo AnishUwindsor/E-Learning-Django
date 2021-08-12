@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css'%}" />
+<title>Group 9 Learning WebApp - {% block title %}Welcome!{% endblock %}</title>
+    </head>
+    <body class="background">
+<div class="content">
+<h1>{% block myhdg %}Hello {{ request.user.first_name }} {{ request.user.last_name }} {% endblock %}</h1>
+    {% block body_block %}*** {% endblock %}
+        </div>
+        <hr />
+
+{%  if request.user.is_authenticated %}
+    <span class="hbar1"><a href="{% url 'myapp:my_account' %}">My Account</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    <span  class="hbar1"><a href = "{% url 'myapp:user_logout' %}">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{% else %}
+    <span class="hbar1"><a href = "{% url 'myapp:user_login' %}">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+{% endif %}
+<span class="hbar1"><a href = "{% url 'myapp:place_order' %}">Place Order Page</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <span class="hbar1"><a href = "{% url 'myapp:review' %}">Give Review</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="hbar1"><a href="/myapp/about/">About this site</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="hbar1"><a href = "{% url 'myapp:index' %}">Return to main page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="hbar1"><a href = "{% url 'myapp:findcourses' %}">Click here to search appropriate courses</a><br/>
+
+    </body>
+</html>

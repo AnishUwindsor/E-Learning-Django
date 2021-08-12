@@ -1,0 +1,24 @@
+{% extends 'myapp/base.html' %}
+{% block title %}
+    Register!
+{% endblock %}
+{% block body_block %}
+   <div class="row">
+
+       <div class="col-md-1"></div>
+       <h2>Register New Student:</h2>
+       <p class="error">{{ msg }}</p>
+       <form method="post" enctype='multipart/form-data'>
+           {% csrf_token %}
+           <table border="1">
+               {{ form }}
+           </table>
+
+           <div class="text-center">
+               <button class="btn btn-primary" type="submit">Submit</button>
+           </div>
+</form>
+                </div>
+
+    </div>
+{% endblock %}

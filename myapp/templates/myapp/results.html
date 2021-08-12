@@ -1,0 +1,15 @@
+{% extends 'myapp/base.html' %}
+
+{% block myhdg %} Hello {{ name }}! {% endblock %}
+{% block title %} Course List {% endblock %}
+
+{% block body_block %}
+    <h2><b> Course List </b></h2>
+    <div>
+        <ol>
+            {% for cor in list_of_course %}
+                <li>{{  cor.title }}: {{ cor.topic }}</li>
+            {%  endfor %}
+        </ol>
+    </div>
+{% endblock %}

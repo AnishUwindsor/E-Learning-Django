@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'myapp/style.css'%}" />
+        <link rel="stylesheet" href="{% static 'myapp/static/myapp/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'myapp/static/myapp/bootstrap.min.js' %}">
+<title>E-Learning WebApp - {% block title %}Welcome!{% endblock %}</title>
+    </head>
+    <body class="background">
+<div class="content">
+
+<div class="headingLogin">
+{% block myhdg %}Welcome {% endblock %}
+</div>
+    {% block body_block %}*** {% endblock %}
+</div>
+<div>
+<br>
+<br>
+<div class="footer">
+    <ul>
+    <span class="hbar1"><a href = "{% url 'myapp:index' %}">Return to main page</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="hbar1"><a href="/myapp/about/">About this site</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <span class="hbar1"><a href = "{% url 'myapp:findcourses' %}">Click here to search appropriate courses</a>
+     <span class="hbar1"><a href = "{% url 'myapp:place_order' %}">Place Order Page</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <span class="hbar1"><a href = "{% url 'myapp:review' %}">Give Review</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% if request.user.username %}
+                    <span class="hbar1"><a href="{% url 'myapp:my_account' %}">My Account</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span  class="hbar1"><a href = "{% url 'myapp:user_logout' %}">Logout</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% else %}
+                   <span class="hbar1"><a href = "{% url 'myapp:user_login' %}">Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="hbar1"><a href = "{% url 'myapp:register' %}">Register</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    {% endif %}
+    </span>
+    </span>
+    </span>
+     </span>
+     </span>
+     </span>
+     </span>
+     </span>
+    </span>
+ </ul>
+</div>
+
+
+
+</div>
+ </body>
+</html>

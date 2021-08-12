@@ -1,0 +1,106 @@
+
+h1 {
+    background-color: #32608561;
+    text-decoration-color: purple;
+    font-size: 25px !important;
+    color: #162973;
+    font-style: italic;
+    position: center;
+    box-shadow: black;
+}
+.hbar1 {
+display: inline;
+margin: 15px;
+}
+
+.heading1 {
+  text-decoration-color: purple;
+    color: purple;
+    text-shadow: 3px 3px bisque;
+    font: 1.6em Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.headingLogin {
+    text-decoration-color: purple;
+    color: purple;
+    text-shadow: 3px 3px bisque;
+    font: 1.6em Verdana, Geneva, Arial, Helvetica, sans-serif;
+    text-align: center;
+
+
+}
+.headinglogin1 {
+     text-align: center;
+    padding: 50px;
+}
+.background{
+    background-color: #5b5255;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+a{
+    text-decoration: underline !important;
+    color: white !important;
+    font: 1em Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+a:hover{
+    background-color: purple;
+}
+.error{
+    color: red;
+}
+.photo{
+    height: 300px;
+    width: 300px;
+}
+h1{
+    margin-top: -1px !important;
+}
+.login{
+    margin-top: 120px;
+}
+.loginIcon{
+    margin-left: 85px;
+    width: 70%;
+    margin-top: -30px;
+}
+
+.centerText{
+        text-align: center !important;
+}
+.topicIcon{
+    margin-top: 33px !important;
+}
+.courseIcon{
+    margin-bottom: 25px;
+}
+.orderLink{
+    margin-left: 100px;
+}
+.order{
+    margin-left: 50px!important;
+}
+.student{
+    margin-top: 55px;
+}
+.school{
+    width: 20%;
+}
+img.rounded-corners{
+    border-radius: 50%;
+}
+.content {
+    min-height: 90vh;
+    overflow-x: hidden;
+    background: #d3d3d3;
+    border-radius: 1%;
+    padding-left: 1%;
+}

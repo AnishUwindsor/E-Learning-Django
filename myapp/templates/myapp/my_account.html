@@ -1,0 +1,33 @@
+{% extends 'myapp/base.html' %}
+{% block myhdg %} <div style="text-align: left;"> {{    fullname   }} </div> {% endblock %}
+{% block body_block %}
+    {%  if student %}
+        {% if image %}<div class="profileimg">
+            <img src="{{ image.url }}" height="100" width="100" style="border-radius: 50%;" alt="No Photo">
+        </div>{% endif %}
+        <div style="font-size: ;font: 1em Verdana, Geneva, Arial, Helvetica, sans-serif;padding-left: 1%;">
+            <h3><br>
+            List of topics interested in</h3>
+         <ol>
+             {% for topic in interested_in %}
+                <li> {{ topic.name}} </li>
+             {% endfor %}
+         </ol>
+        </br>
+        </br>
+        </div>
+
+        <div style="font-size: ;font: 1em Verdana, Geneva, Arial, Helvetica, sans-serif;padding-left: 1%;">
+
+            <h3><br>List of registered courses: </h3>
+          <ol>
+             {% for course in registered %}
+                <li> {{ course.title}} </li>
+             {% endfor %}
+         </ol>
+        </div>
+
+    {% else %}
+        <strong>You are not a registered student!</strong>
+    {% endif %}
+{% endblock %}

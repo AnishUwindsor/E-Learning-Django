@@ -1,0 +1,12 @@
+{% extends 'myapp/base.html' %}
+{% block body_block %}
+<div class="headinglogin1">
+    <form action="{% url 'myapp:user_login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username" />
+        <input type="password" name="password" placeholder="password" />
+        <input type="submit" name="submit1" value="Login" />
+    <a href={% url 'password_reset' %} }}>Forgot Password?</a>
+    </form>
+
+{% endblock %}

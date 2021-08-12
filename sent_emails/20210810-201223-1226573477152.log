@@ -1,0 +1,22 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: student1@gmail.com
+Date: Wed, 11 Aug 2021 00:12:23 -0000
+Message-ID: <162864074303.7816.17833668585960044551@DESKTOP-8PA7ESG.ht.home>
+
+
+To initiate the password reset process for your Account student1@gmail.com,
+click the link below:
+
+http://127.0.0.1:8000/reset/Nw/ar6lgn-7c5cc4643ec15ad8d925ffa1c05310c6/
+
+If clicking the link above doesn't work, please copy and paste the URL in a new browser
+window instead.
+
+Sincerely,
+Group 3
+
+-------------------------------------------------------------------------------
